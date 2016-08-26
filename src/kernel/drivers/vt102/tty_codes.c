@@ -5,14 +5,14 @@
 #include <stdarg.h>
 #include <sys/fcntl.h>
 
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "fsman.h"
-#include "klog.h"
-#include "tty.h"
-#include "drivers/serial.h"
-#include "drivers/console.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/klog.h>
+#include <chronos/tty.h>
+#include <chronos/drivers/serial.h>
+#include <chronos/drivers/console.h>
 
 // #define DEBUG 1
 #define cprintf ___cprintf

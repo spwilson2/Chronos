@@ -2,22 +2,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "file.h"
-#include "stdarg.h"
-#include "stdlock.h"
-#include "fsman.h"
-#include "devman.h"
-#include "tty.h"
-#include "pipe.h"
-#include "proc.h"
-#include "vm.h"
-#include "panic.h"
-#include "cpu.h"
-#include "ktime.h"
-#include "trap.h"
-#include "signal.h"
-#include "cacheman.h"
+#include <chronos/kstdlib.h>
+#include <chronos/file.h>
+#include <chronos/stdarg.h>
+#include <chronos/stdlock.h>
+#include <chronos/fsman.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/pipe.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/panic.h>
+#include <chronos/cpu.h>
+#include <chronos/ktime.h>
+#include <chronos/trap.h>
+#include <chronos/signal.h>
+#include <chronos/cacheman.h>
 
 void main_stack(void);
 

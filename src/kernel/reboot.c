@@ -1,8 +1,8 @@
 #include <signal.h>
 
-#include "panic.h"
-#include "proc.h"
-#include "chronos.h"
+#include <chronos/panic.h>
+#include <chronos/proc.h>
+#include <chronos/chronos.h>
 
 #if 0
 static int still_up()

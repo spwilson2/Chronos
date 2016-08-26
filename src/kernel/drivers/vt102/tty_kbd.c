@@ -1,18 +1,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "panic.h"
-#include "tty.h"
-#include "iosched.h"
-#include "tty.h"
-#include "proc.h"
-#include "vm.h"
-#include "drivers/console.h"
-#include "drivers/keyboard.h"
-#include "drivers/serial.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/panic.h>
+#include <chronos/tty.h>
+#include <chronos/iosched.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/drivers/console.h>
+#include <chronos/drivers/keyboard.h>
+#include <chronos/drivers/serial.h>
 
 // #define DEBUG
 // #define KEY_DEBUG

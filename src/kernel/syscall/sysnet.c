@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "stdlock.h"
-#include "file.h"
-#include "syscall.h"
-#include "devman.h"
-#include "fsman.h"
-#include "netman.h"
-#include "syscall.h"
-#include "chronos.h"
-#include "pipe.h"
-#include "tty.h"
-#include "proc.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/syscall.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/netman.h>
+#include <chronos/syscall.h>
+#include <chronos/chronos.h>
+#include <chronos/pipe.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
 
 int sys_gethostname(void)
 {

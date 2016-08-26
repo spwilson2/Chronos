@@ -8,16 +8,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "stdarg.h"
-#include "stdlock.h"
-#include "pipe.h"
-#include "file.h"
-#include "devman.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdarg.h>
+#include <chronos/stdlock.h>
+#include <chronos/pipe.h>
+#include <chronos/file.h>
+#include <chronos/devman.h>
 
-#include "fsman.h"
-#include "tty.h"
-#include "proc.h"
+#include <chronos/fsman.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
 
 /* Pipe table */
 struct pipe pipe_table[MAX_PIPES];

@@ -3,12 +3,12 @@
 #include <sys/ioctl.h>
 #include <unistd.h>
 
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "panic.h"
-#include "tty.h"
-#include "proc.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/panic.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
 
 // #define DEBUG
 // #define KEY_DEBUG

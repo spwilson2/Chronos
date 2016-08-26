@@ -2,9 +2,9 @@
 #include <sys/stat.h>
 #include <sys/fcntl.h>
 
-#include "klog.h"
-#include "stdlock.h"
-#include "fsman.h"
+#include <chronos/klog.h>
+#include <chronos/stdlock.h>
+#include <chronos/fsman.h>
 
 static slock_t klog_lock;
 static struct klog klog_table[NKLOG];

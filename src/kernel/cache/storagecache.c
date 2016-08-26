@@ -20,16 +20,16 @@ int log2_linux(int value); /* defined in ext2.c*/
 
 #include <stdlib.h>
 #include <string.h>
-#include "kstdlib.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/panic.h>
 
 #endif
 
-#include "vm.h"
-#include "stdlock.h"
-#include "file.h"
-#include "fsman.h"
-#include "drivers/storageio.h"
+#include <chronos/vm.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/drivers/storageio.h>
 
 static int storage_cache_sync(void* ptr, sect_t sect_start, 
 		struct cache* cache, void* context)

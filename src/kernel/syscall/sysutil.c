@@ -1,15 +1,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "file.h"
-#include "stdlock.h"
-#include "pipe.h"
-#include "devman.h"
-#include "tty.h"
-#include "fsman.h"
-#include "proc.h"
-#include "chronos.h"
+#include <chronos/kstdlib.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/pipe.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/fsman.h>
+#include <chronos/proc.h>
+#include <chronos/chronos.h>
 
 /** Check to see if an fd is valid */
 int fd_ok(int fd)

@@ -10,28 +10,28 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "kstdlib.h"
-#include "idt.h"
-#include "trap.h"
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "chronos.h"
-#include "x86.h"
-#include "panic.h"
-#include "stdarg.h"
-#include "syscall.h"
-#include "tty.h"
-#include "fsman.h"
-#include "pipe.h"
-#include "proc.h"
-#include "signal.h"
-#include "vm.h"
-#include "k/vm.h"
-#include "drivers/pic.h"
-#include "drivers/pit.h"
-#include "drivers/cmos.h"
-#include "drivers/rtc.h"
+#include <chronos/kstdlib.h>
+#include <chronos/idt.h>
+#include <chronos/trap.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/chronos.h>
+#include <chronos/x86.h>
+#include <chronos/panic.h>
+#include <chronos/stdarg.h>
+#include <chronos/syscall.h>
+#include <chronos/tty.h>
+#include <chronos/fsman.h>
+#include <chronos/pipe.h>
+#include <chronos/proc.h>
+#include <chronos/signal.h>
+#include <chronos/vm.h>
+#include <chronos/k/vm.h>
+#include <chronos/drivers/pic.h>
+#include <chronos/drivers/pit.h>
+#include <chronos/drivers/cmos.h>
+#include <chronos/drivers/rtc.h>
 
 #define TRAP_COUNT 256
 #define INTERRUPT_TABLE_SIZE (sizeof(struct int_gate) * TRAP_COUNT)

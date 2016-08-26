@@ -4,12 +4,12 @@
  * Driver for Serial connections.
  */
 
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "x86.h"
-#include "k/drivers/serial.h"
-#include "drivers/pic.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/x86.h>
+#include <chronos/k/drivers/serial.h>
+#include <chronos/drivers/pic.h>
 
 #define COM1_DATA 			0x03F8
 #define COM1_INT  			0x03F9

@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "proc.h"
-#include "panic.h"
-#include "drivers/cmos.h"
-#include "drivers/rtc.h"
-#include "ktime.h"
+#include <chronos/kstdlib.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
+#include <chronos/drivers/cmos.h>
+#include <chronos/drivers/rtc.h>
+#include <chronos/ktime.h>
 
 // #define DEBUG
 

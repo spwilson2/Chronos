@@ -7,20 +7,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "x86.h"
-#include "stdlock.h"
-#include "trap.h"
-#include "devman.h"
-#include "proc.h"
-#include "vm.h"
-#include "k/vm.h"
-#include "stdarg.h"
-#include "panic.h"
-#include "context.h"
+#include <chronos/kstdlib.h>
+#include <chronos/x86.h>
+#include <chronos/stdlock.h>
+#include <chronos/trap.h>
+#include <chronos/devman.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/k/vm.h>
+#include <chronos/stdarg.h>
+#include <chronos/panic.h>
+#include <chronos/context.h>
 
 /* We need some graphics config for bootup */
-#include "k/drivers/console.h"
+#include <chronos/k/drivers/console.h>
 
 context_t k_context; /* The kernel context */
 pstack_t k_stack; /* Kernel stack */

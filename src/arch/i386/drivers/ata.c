@@ -11,16 +11,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "stdlock.h"
-#include "file.h"
-#include "fsman.h"
-#include "devman.h"
-#include "drivers/ata.h"
-#include "x86.h"
-#include "panic.h"
-#include "stdarg.h"
-#include "fsman.h"
-#include "storagecache.h"
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/devman.h>
+#include <chronos/drivers/ata.h>
+#include <chronos/x86.h>
+#include <chronos/panic.h>
+#include <chronos/stdarg.h>
+#include <chronos/fsman.h>
+#include <chronos/storagecache.h>
 
 #define PRIMARY_ATA_BASE 0x1F0 /* Base port for primary controller */
 #define SECONDARY_ATA_BASE 0x170 /* Base port for secondary controller */

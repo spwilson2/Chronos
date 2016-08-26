@@ -5,7 +5,7 @@
  * A standard lock library implementation.
  */
 
-#include "stdlock.h"
+#include <chronos/stdlock.h>
 
 void slock_init(slock_t* lock)
 {

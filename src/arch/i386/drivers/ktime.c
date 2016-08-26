@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "ktime.h"
-#include "drivers/rtc.h"
-#include "stdlock.h"
-#include "stdarg.h"
-#include "x86.h"
+#include <chronos/kstdlib.h>
+#include <chronos/ktime.h>
+#include <chronos/drivers/rtc.h>
+#include <chronos/stdlock.h>
+#include <chronos/stdarg.h>
+#include <chronos/x86.h>
 
 slock_t rtc_lock;
 struct rtc_t k_time;

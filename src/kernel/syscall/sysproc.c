@@ -7,22 +7,22 @@
 #include <sys/fcntl.h>
 #include <sys/wait.h>
 
-#include "kstdlib.h"
-#include "syscall.h"
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "fsman.h"
-#include "tty.h"
-#include "pipe.h"
-#include "proc.h"
-#include "chronos.h"
-#include "vm.h"
-#include "trap.h"
-#include "panic.h"
-#include "signal.h"
-#include "elf.h"
-#include "sched.h"
+#include <chronos/kstdlib.h>
+#include <chronos/syscall.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/tty.h>
+#include <chronos/pipe.h>
+#include <chronos/proc.h>
+#include <chronos/chronos.h>
+#include <chronos/vm.h>
+#include <chronos/trap.h>
+#include <chronos/panic.h>
+#include <chronos/signal.h>
+#include <chronos/elf.h>
+#include <chronos/sched.h>
 
 // #define DEBUG
 

@@ -1,10 +1,10 @@
 #include <string.h>
-#include "storageio.h"
-#include "panic.h"
-#include "storagecache.h"
-#include "drivers/ata.h"
-#include "drivers/ext2.h"
-#include "drivers/lwfs.h"
+#include <chronos/storageio.h>
+#include <chronos/panic.h>
+#include <chronos/storagecache.h>
+#include <chronos/drivers/ata.h>
+#include <chronos/drivers/ext2.h>
+#include <chronos/drivers/lwfs.h>
 
 extern struct FSDriver* fs_alloc(void);
 extern void fs_free(struct FSDriver* driver);

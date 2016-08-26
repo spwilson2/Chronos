@@ -36,9 +36,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "stdlock.h"
-#include "proc.h"
-#include "panic.h"
+#include <chronos/stdlock.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
 
 // #define DEBUG
 

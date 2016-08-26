@@ -3,25 +3,25 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#include "kstdlib.h"
-#include "x86.h"
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "elf.h"
-#include "drivers/serial.h"
-#include "fsman.h"
-#include "drivers/ata.h"
-#include "stdlib.h"
-#include "drivers/console.h"
-#include "drivers/keyboard.h"
-#include "drivers/ext2.h"
-#include "proc.h"
-#include "vm.h"
-#include "storageio.h"
-#include "storagecache.h"
-#include "cacheman.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/x86.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/elf.h>
+#include <chronos/drivers/serial.h>
+#include <chronos/fsman.h>
+#include <chronos/drivers/ata.h>
+#include <chronos/stdlib.h>
+#include <chronos/drivers/console.h>
+#include <chronos/drivers/keyboard.h>
+#include <chronos/drivers/ext2.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/storageio.h>
+#include <chronos/storagecache.h>
+#include <chronos/cacheman.h>
+#include <chronos/panic.h>
 
 /**
  * Stage 2 of the boot loader. This code must load the kernel from disk 

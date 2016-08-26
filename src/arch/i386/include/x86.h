@@ -107,8 +107,8 @@
 
 #ifndef __ASM_ONLY__
 
-#include "context.h"
-#include "vm.h"
+#include <chronos/context.h>
+#include <chronos/vm.h>
 
 /* Unsigned types */
 typedef unsigned char uchar;

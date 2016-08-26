@@ -1,11 +1,11 @@
 #include <string.h>
 
-#include "iosched.h"
-#include "stdlock.h"
-#include "proc.h"
-#include "devman.h"
-#include "context.h"
-#include "panic.h"
+#include <chronos/iosched.h>
+#include <chronos/stdlock.h>
+#include <chronos/proc.h>
+#include <chronos/devman.h>
+#include <chronos/context.h>
+#include <chronos/panic.h>
 
 void sched_init()
 {

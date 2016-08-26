@@ -8,25 +8,25 @@
 #include <string.h>
 #include <sys/fcntl.h>
 
-#include "kstdlib.h"
-#include "file.h"
-#include "elf.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "tty.h"
-#include "file.h"
-#include "fsman.h"
-#include "pipe.h"
-#include "proc.h"
-#include "vm.h"
-#include "trap.h"
-#include "panic.h"
-#include "stdarg.h"
-#include "syscall.h"
-#include "chronos.h"
-#include "iosched.h"
-#include "time.h"
-#include "context.h"
+#include <chronos/kstdlib.h>
+#include <chronos/file.h>
+#include <chronos/elf.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/pipe.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/trap.h>
+#include <chronos/panic.h>
+#include <chronos/stdarg.h>
+#include <chronos/syscall.h>
+#include <chronos/chronos.h>
+#include <chronos/iosched.h>
+#include <chronos/time.h>
+#include <chronos/context.h>
 
 extern struct vsfs_context context;
 

@@ -1,9 +1,9 @@
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "tty.h"
-#include "k/drivers/console.h"
-#include "x86.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/k/drivers/console.h>
+#include <chronos/x86.h>
 
 void cprintf_init(void)
 {

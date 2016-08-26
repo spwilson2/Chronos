@@ -1,16 +1,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "stdlock.h"
-#include "file.h"
-#include "pipe.h"
-#include "devman.h"
-#include "fsman.h"
-#include "tty.h"
-#include "proc.h"
-#include "vm.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/pipe.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/panic.h>
 
 
 /**

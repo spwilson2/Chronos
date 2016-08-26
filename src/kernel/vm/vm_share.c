@@ -1,11 +1,11 @@
-#include "vm.h"
+#include <chronos/vm.h>
 
 #if ((!defined _ARCH_SHARE_PROVIDED_) && (defined __ALLOW_VM_SHARE__))
 
 #include <sys/types.h>
 #include <string.h>
-#include "stdlock.h"
-#include "panic.h"
+#include <chronos/stdlock.h>
+#include <chronos/panic.h>
 
 #define PARANOID
 // #define DEBUG

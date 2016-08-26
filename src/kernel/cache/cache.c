@@ -4,7 +4,7 @@
 
 #ifdef __LINUX__
 #include <sys/types.h>
-#include "stdlock.h"
+#include <chronos/stdlock.h>
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,12 +18,12 @@ int log2_linux(int value); /* defined in ext2.c*/
 #else
 #include <string.h>
 #include <stdlib.h>
-#include "kstdlib.h"
-#include "stdlock.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdlock.h>
+#include <chronos/panic.h>
 #endif
 
-#include "cache.h"
+#include <chronos/cache.h>
 #define log2 __log2
 // #define CACHE_DEBUG
 // #define CACHE_DEBUG_VER

@@ -1,6 +1,6 @@
 # Jump into the kernel.
 #define __ASM_ONLY__
-#include "vm.h"
+#include <chronos/vm.h>
 
 .code32		# Start generating 16 bit code. (Real mode)
 /** __kernel_jmp(uint address) */

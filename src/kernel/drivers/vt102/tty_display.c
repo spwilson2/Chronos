@@ -1,18 +1,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "panic.h"
-#include "iosched.h"
-#include "stdarg.h"
-#include "stdlib.h"
-#include "proc.h"
-#include "fcntl.h"
-#include "tty.h"
-#include "drivers/serial.h"
-#include "drivers/console.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/panic.h>
+#include <chronos/iosched.h>
+#include <chronos/stdarg.h>
+#include <chronos/stdlib.h>
+#include <chronos/proc.h>
+#include <chronos/fcntl.h>
+#include <chronos/tty.h>
+#include <chronos/drivers/serial.h>
+#include <chronos/drivers/console.h>
 
 void tty_putc_native(char c, tty_t t);
 void tty_putc(tty_t t, char c)

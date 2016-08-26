@@ -7,8 +7,8 @@
 
 #include <string.h>
 
-#include "vm.h"
-#include "stdlock.h"
+#include <chronos/vm.h>
+#include <chronos/stdlock.h>
 
 #define E820_UNUSED     0x01
 #define E820_RESERVED   0x02

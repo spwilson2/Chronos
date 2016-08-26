@@ -1,10 +1,10 @@
 #include <sys/fcntl.h>
 #include <sys/select.h>
 
-#include "proc.h"
-#include "syscall.h"
-#include "ktime.h"
-#include "drivers/rtc.h"
+#include <chronos/proc.h>
+#include <chronos/syscall.h>
+#include <chronos/ktime.h>
+#include <chronos/drivers/rtc.h>
 
 int sys_select_next_fd(int curr_fd, fd_set* set, int max_fd)
 {

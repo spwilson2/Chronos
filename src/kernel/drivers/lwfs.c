@@ -3,13 +3,13 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "panic.h"
-#include "cacheman.h"
-#include "stdlock.h"
-#include "file.h"
-#include "vm.h"
+#include <chronos/panic.h>
+#include <chronos/cacheman.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/vm.h>
 #define NO_DEFINE_INODE
-#include "fsman.h"
+#include <chronos/fsman.h>
 #undef NO_DEFINE_INODE
 
 typedef uint32_t blkid_t;
@@ -38,7 +38,7 @@ typedef uint32_t sect_t;
 #endif
 
 #ifdef KTIME_PROVIDED
-#include "ktime.h"
+#include <chronos/ktime.h>
 #endif
 
 #define LWFS_LINK_MAX 2048

@@ -1,12 +1,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "stdlock.h"
-#include "cpu.h"
-#include "x86.h"
-#include "drivers/pic.h"
-#include "panic.h"
-#include "drivers/cmos.h"
+#include <chronos/stdlock.h>
+#include <chronos/cpu.h>
+#include <chronos/x86.h>
+#include <chronos/drivers/pic.h>
+#include <chronos/panic.h>
+#include <chronos/drivers/cmos.h>
 
 #define INT8_ENABLE_INTERVAL	0x40
 #define INT8_ENABLE_ALARM	0x20

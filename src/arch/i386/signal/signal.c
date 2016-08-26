@@ -12,22 +12,22 @@
 #include <unistd.h>
 #include <signal.h>
 
-#include "kstdlib.h"
-#include "ksignal.h"
-#include "x86.h"
-#include "stdarg.h"
-#include "stdlock.h"
-#include "trap.h"
-#include "file.h"
-#include "fsman.h"
-#include "devman.h"
-#include "pipe.h"
-#include "tty.h"
-#include "proc.h"
-#include "panic.h"
-#include "vm.h"
-#include "cpu.h"
-#include "chronos.h"
+#include <chronos/kstdlib.h>
+#include <chronos/ksignal.h>
+#include <chronos/x86.h>
+#include <chronos/stdarg.h>
+#include <chronos/stdlock.h>
+#include <chronos/trap.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/devman.h>
+#include <chronos/pipe.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
+#include <chronos/vm.h>
+#include <chronos/cpu.h>
+#include <chronos/chronos.h>
 
 //#define DEBUG
 

@@ -47,9 +47,9 @@ int log2_linux(int value)
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "stdarg.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdarg.h>
+#include <chronos/panic.h>
 
 #define log2 __log2
 
@@ -57,16 +57,16 @@ int log2_linux(int value)
 
 #include <unistd.h>
 
-#include "file.h"
-#include "stdlock.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
 #define NO_DEFINE_INODE
-#include "fsman.h"
-#include "drivers/ext2.h"
-#include "drivers/storageio.h"
-#include "cache.h"
-#include "storagecache.h"
-#include "cacheman.h"
-#include "vm.h"
+#include <chronos/fsman.h>
+#include <chronos/drivers/ext2.h>
+#include <chronos/drivers/storageio.h>
+#include <chronos/cache.h>
+#include <chronos/storagecache.h>
+#include <chronos/cacheman.h>
+#include <chronos/vm.h>
 
 #define EXT2_DIRECT_COUNT 12
 

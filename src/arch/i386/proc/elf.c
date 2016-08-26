@@ -1,13 +1,13 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <string.h>
-#include "vm.h"
-#include "k/vm.h"
-#include "panic.h"
-#include "stdlock.h"
-#include "file.h"
-#include "fsman.h"
-#include "elf.h"
+#include <chronos/vm.h>
+#include <chronos/k/vm.h>
+#include <chronos/panic.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/elf.h>
 
 int elf_check_binary_path(const char* path)
 {

@@ -8,13 +8,13 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "tty.h"
-#include "stdarg.h"
-#include "fsman.h"
+#include <chronos/kstdlib.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/stdarg.h>
+#include <chronos/fsman.h>
 
 extern int video_mode;
 inode* log;

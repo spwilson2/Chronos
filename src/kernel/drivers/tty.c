@@ -1,12 +1,12 @@
 #include <string.h>
 
-#include "tty.h"
-#include "stdlock.h"
-#include "proc.h"
-#include "devman.h"
-#include "panic.h"
-#include "elf.h"
-#include "drivers/console.h"
+#include <chronos/tty.h>
+#include <chronos/stdlock.h>
+#include <chronos/proc.h>
+#include <chronos/devman.h>
+#include <chronos/panic.h>
+#include <chronos/elf.h>
+#include <chronos/drivers/console.h>
 
 static struct tty ttys[MAX_TTYS];
 struct tty* active_tty = NULL;

@@ -1,8 +1,8 @@
-#include "context.h"
-#include "proc.h"
-#include "x86.h"
-#include "trap.h"
-#include "panic.h"
+#include <chronos/context.h>
+#include <chronos/proc.h>
+#include <chronos/x86.h>
+#include <chronos/trap.h>
+#include <chronos/panic.h>
 
 extern context_t k_context;
 extern struct vm_segment_descriptor global_descriptor_table[];

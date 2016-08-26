@@ -1,7 +1,7 @@
 #include <string.h>
 
 
-#include "stdlock.h"
+#include <chronos/stdlock.h>
 #include "sem.h"
 
 /**

@@ -1,6 +1,6 @@
 #define __ASM_ONLY__
-#include "x86.h"
-#include "trap.h"
+#include <chronos/x86.h>
+#include <chronos/trap.h>
 
 /* unsigned int x86_get_cr0(void) */
 .globl x86_get_cr0

@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "stdlock.h"
-#include "devman.h"
-#include "fsman.h"
-#include "pipe.h"
-#include "device.h"
-#include "vm.h"
-#include "panic.h"
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/pipe.h>
+#include <chronos/device.h>
+#include <chronos/vm.h>
+#include <chronos/panic.h>
 
 static slock_t device_table_lock;
 static struct IODevice devices[MAX_DEVICES];

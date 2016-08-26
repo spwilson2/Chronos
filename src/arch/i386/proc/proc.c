@@ -1,9 +1,9 @@
 #include <string.h>
 
-#include "drivers/rtc.h"
-#include "ktime.h"
-#include "stdlock.h"
-#include "proc.h"
+#include <chronos/drivers/rtc.h>
+#include <chronos/ktime.h>
+#include <chronos/stdlock.h>
+#include <chronos/proc.h>
 
 extern int k_ticks;
 extern struct rtc_t k_time;

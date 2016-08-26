@@ -1,14 +1,14 @@
-#include "stdlock.h"
-#include "file.h"
-#include "syscall.h"
-#include "pipe.h"
-#include "devman.h"
-#include "fsman.h"
-#include "tty.h"
-#include "proc.h"
-#include "vm.h"
-#include "chronos.h"
-#include "panic.h"
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/syscall.h>
+#include <chronos/pipe.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/tty.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/chronos.h>
+#include <chronos/panic.h>
 
 
 void* mmap(void* hint, size_t sz, int protection,

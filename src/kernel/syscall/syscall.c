@@ -1,23 +1,23 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "kstdlib.h"
-#include "stdlock.h"
-#include "file.h"
-#include "fsman.h"
-#include "devman.h"
-#include "tty.h"
-#include "pipe.h"
-#include "proc.h"
-#include "vm.h"
-#include "chronos.h"
-#include "cpu.h"
-#include "tty.h"
-#include "elf.h"
-#include "stdarg.h"
-#include "syscall.h"
-#include "panic.h"
-#include "reboot.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/fsman.h>
+#include <chronos/devman.h>
+#include <chronos/tty.h>
+#include <chronos/pipe.h>
+#include <chronos/proc.h>
+#include <chronos/vm.h>
+#include <chronos/chronos.h>
+#include <chronos/cpu.h>
+#include <chronos/tty.h>
+#include <chronos/elf.h>
+#include <chronos/stdarg.h>
+#include <chronos/syscall.h>
+#include <chronos/panic.h>
+#include <chronos/reboot.h>
 
 // #define DEBUG
 

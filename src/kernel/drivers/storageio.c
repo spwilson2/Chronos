@@ -13,13 +13,13 @@
 #else
 #include <string.h>
 #include <stdlib.h>
-#include "kstdlib.h"
+#include <chronos/kstdlib.h>
 #endif
 
-#include "file.h"
-#include "stdlock.h"
-#include "fsman.h"
-#include "drivers/storageio.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/fsman.h>
+#include <chronos/drivers/storageio.h>
 
 int storageio_read(void* dst, fileoff_t start, size_t sz, 
 		struct FSDriver* driver)

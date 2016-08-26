@@ -1,8 +1,8 @@
 #ifndef _ATA_H_
 #define _ATA_H_
 
-#include "fsman.h"
-#include "devman.h"
+#include <chronos/fsman.h>
+#include <chronos/devman.h>
 
 typedef unsigned int sect_t;
 

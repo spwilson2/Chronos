@@ -9,21 +9,21 @@
 #include <string.h>
 #include <sys/fcntl.h>
 
-#include "kstdlib.h"
-#include "file.h"
-#include "stdlock.h"
-#include "devman.h"
-#include "fsman.h"
-#include "panic.h"
-#include "stdarg.h"
-#include "pipe.h"
-#include "tty.h"
-#include "chronos.h"
-#include "proc.h"
-#include "panic.h"
-#include "storagecache.h"
-#include "drivers/ext2.h"
-#include "drivers/lwfs.h"
+#include <chronos/kstdlib.h>
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/panic.h>
+#include <chronos/stdarg.h>
+#include <chronos/pipe.h>
+#include <chronos/tty.h>
+#include <chronos/chronos.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
+#include <chronos/storagecache.h>
+#include <chronos/drivers/ext2.h>
+#include <chronos/drivers/lwfs.h>
 
 // #define DEBUG
 

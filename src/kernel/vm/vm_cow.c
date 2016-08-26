@@ -1,4 +1,4 @@
-#include "vm.h"
+#include <chronos/vm.h>
 
 /**
  * This generic Copy on Wite (COW) implementation is dependant upon
@@ -8,7 +8,7 @@
 
 #if ((!defined _ARCH_SHARE_PROVIDED_) && (defined __ALLOW_VM_SHARE__))
 
-#include "panic.h"
+#include <chronos/panic.h>
 
 // #define DEBUG
 

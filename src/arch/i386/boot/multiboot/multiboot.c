@@ -1,4 +1,4 @@
-#include "multiboot.h"
+#include <chronos/multiboot.h>
 
 void multiboot_main(void)
 {

@@ -6,17 +6,17 @@
 #include <sys/select.h>
 #include <dirent.h>
 
-#include "kstdlib.h"
-#include "stdlock.h"
-#include "file.h"
-#include "devman.h"
-#include "fsman.h"
-#include "tty.h"
-#include "pipe.h"
-#include "syscall.h"
-#include "chronos.h"
-#include "proc.h"
-#include "panic.h"
+#include <chronos/kstdlib.h>
+#include <chronos/stdlock.h>
+#include <chronos/file.h>
+#include <chronos/devman.h>
+#include <chronos/fsman.h>
+#include <chronos/tty.h>
+#include <chronos/pipe.h>
+#include <chronos/syscall.h>
+#include <chronos/chronos.h>
+#include <chronos/proc.h>
+#include <chronos/panic.h>
 
 // #define DEBUG_SELECT
 // #define DEBUG

@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <stdlib.h>
-#include "syscall.h"
+#include <chronos/syscall.h>
 
 /**
  * ioctl helper function
