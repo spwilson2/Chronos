@@ -4,16 +4,15 @@ import os
 
 InitSbuild()
 
-O = getenv('O')
-if O is None:
-    O=''
+# Take a build directory
+O = ARGUMENTS.get('O', '')
 
 Phony(  
         allyesconfig=allyesconfig,
         defconfig=defconfig,
         # Clean target needs to also set the environment variable O since it's
         # not exported..
-        clean=['O='+ O +' scons -c', 'rm site_scons/*.pyc'],
+        clean=[' scons -c O='+O, 'rm site_scons/*.pyc'],
         auto=None,
         TEST=None
      )

@@ -1,9 +1,11 @@
 # TODO: Limit after development
+from os import getenv
+
 from util import *
 from kconf_util import *
 from global_cheats import *
 from SCons.Script import Import as __Import
-from os import getenv
+import debug
 
 def Init(*args, **kwargs):
     __Import('kenv')
@@ -48,8 +50,16 @@ def import_tool(path, tool):
     Import(tool)
     return globals()[tool]
 
+tools = {}
+
 def Tool(target, sources, usage=None ,env=None):
     """Define a tool that is used to generate sources."""
+
+    if target in tools:
+        if debug.enabled():
+            debug.debug_print(__name__, ': ', target, 'has already been built, '
+                    'returning: ', str(tools[target]), 'as Tool.')
+        return tools[target]
 
     if env is None:
         env = local_globals['host_env']
@@ -76,10 +86,15 @@ def Tool(target, sources, usage=None ,env=None):
     env['BUILDERS'][target] = tool_builder
 
     # Add the target to our local globals so we can `Export` it.
-    globals()[target] = getattr(env, target)
+    tool_object = getattr(env, target)
+    globals()[target] = tool_object
+
+    # Add the tool to build targets, so we don't rebuild when importing.
+    tools[target] = tool_object
 
     # Export the tool so we can Import it when we need to import_tool
     Export(target)
+
 
 class Target(object):
     def __init__(self):
