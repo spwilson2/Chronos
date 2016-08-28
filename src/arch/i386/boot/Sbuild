@@ -69,6 +69,9 @@ for src in append_paths(boot_stage2_deps):
     boot_stage2['y'] += stage2_env.Object(target=joinpath(stage2_objpath, src), source='#'+src)
 
 boot_imager = import_tool('../tools/', 'boot-imager')
-boot_imager('boot-stage2.img', boot_stage2['y'])
+
+# List all the dependencies created when using the imager.
+boot_imager(['boot-stage2.img', '#boot-stage2.o.rodata', '#boot-stage2.o.text',
+'#boot-stage2.o.data', '#boot-stage2.o'], boot_stage2['y'])
         
 multiboot   = Target()
