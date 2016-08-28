@@ -14,6 +14,9 @@ export(arch_obj=arch_obj)
 
 include('./tools')
 
+mkvect = import_tool('tools', 'mkvect')
+mkvect(target='trap/idt.S', source=None)
+
 include('./signal')
 include('./syscall')
 include('./src')
