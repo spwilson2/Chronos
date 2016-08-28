@@ -16,7 +16,6 @@ class Config(object):
         self.fallback = ''
         for key, val in config_dict.items():
             self.__dict__[key] = val
-        print(self)
 
     def __getattribute__(self, name):
         """

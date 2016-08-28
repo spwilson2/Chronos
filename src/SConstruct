@@ -4,15 +4,12 @@ import os
 
 InitSbuild()
 
-# Take a build directory
-O = ARGUMENTS.get('O', '')
-
 Phony(  
         allyesconfig=allyesconfig,
         defconfig=defconfig,
         # Clean target needs to also set the environment variable O since it's
         # not exported..
-        clean=[' scons -c O='+O, 'rm site_scons/*.pyc'],
+        clean=[' scons -c O='+build_path(), 'rm site_scons/*.pyc'],
         auto=None,
         TEST=None
      )
@@ -95,11 +92,12 @@ add_global_env(kenv=kenv, host_env=host_env)
 kobj = Target()
 export(kobj=kobj)
 
-
+KDIR=Dir(joinpath(build_path(), Dir('kernel').path))
+export(KDIR=KDIR)
 
 # The first build needs to be put into the 'build' variant_dir
-SConscript('Sbuild', exports='kenv', variant_dir=O)
-Clean('.', O)
+SConscript('Sbuild', exports='kenv', variant_dir=build_path())
+Clean('.', build_path())
 
 if 'TEST' in BUILD_TARGETS:
 

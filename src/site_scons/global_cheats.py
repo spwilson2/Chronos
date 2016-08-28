@@ -24,7 +24,7 @@ def add_global_env(**kwargs):
         exports[key] = val
 
 
-def include(sbuild):
+def include(sbuild, variant_dir=None):
     # TODO: Support a list of sbuilds as well.
     # TODO: Utility function to split lists into strings or return a single string
     # TODO:
@@ -33,7 +33,8 @@ def include(sbuild):
     cloned_kenv = kenv.Clone()
 
     def call_with_kenv(kenv):
-        SConscript(joinpath(sbuild,'Sbuild'), exports=exports.keys())
+        SConscript(joinpath(sbuild,'Sbuild'), exports=exports.keys(),
+                variant_dir=variant_dir)
                 #variant_dir=joinpath('build', sbuild))
 
     call_with_kenv(cloned_kenv)

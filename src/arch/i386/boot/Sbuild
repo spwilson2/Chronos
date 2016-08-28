@@ -1,0 +1,73 @@
+Init()
+
+stage1_env = arch_env.Clone()
+STAGE1_LINKFLAGS = ['--section-start=.text=0x7c00', '--entry=start']
+add_flags(stage1_env, LINKFLAGS=STAGE1_LINKFLAGS)
+
+boot_stage1_obj = Target()
+
+boot_stage1_obj['y'] += Glob(joinpath('stage1','*.[Sc]'))
+
+stage1_env.Program('boot-stage1.o', boot_stage1_obj['y'])
+
+boot_stage2_deps = {
+
+    # TODO: Make this workaround a keyword, for instance 'get_build_path'
+    # rather, not have to export these values globally.
+
+    KDIR.path: {
+        'drivers':  ['storageio', 'ext2'],
+        'cache':    ['cache', 'storagecache', 'cacheman'],
+        None:       ['stdlock', 'file', 'stdlib']
+    },
+
+    ADIR.path: {
+        'vm':       ['asm.S', 'pgdir', 'vm_alloc'],
+        'drivers':  ['pic', 'ata', 'serial'],
+        'x86':      ['asm.S'],
+        'src':      ['cpu'],
+        'lock':     ['stdlock'],
+    },
+
+    Dir('stage2').path:       ['stage2', 'stage2_jmp.S', 'vm']
+}
+
+
+def append_paths(dep_dict, base_path=None):
+
+    end_list = []
+    
+    if is_string(dep_dict):
+        return [joinpath(base_path, dep_dict)]
+
+    # Helper to join the paths of items in lists to the key and base_path
+    def join_key_to_list(dict_, base_path=None):
+
+        final_list = []
+        for key, list_ in dict_.items():
+            for item in list_:
+                final_list.append(joinpath(base_path, key, item))
+        return final_list
+
+    for key, val in dep_dict.items():
+        if is_list(val):
+            end_list.extend(join_key_to_list({key:val}, base_path))
+        else:
+            end_list.extend(append_paths(val, base_path=joinpath(base_path, key)))
+
+    return end_list
+
+stage2_objpath = 'boot-stage2.build'
+
+boot_stage2 = Target()
+stage2_env = arch_env.Clone()
+stage2_env.VariantDir(stage2_objpath, '#') 
+
+for src in append_paths(boot_stage2_deps):
+    #print(joinpath(stage2_objpath, src))
+    print(src)
+    boot_stage2['y'] += stage2_env.Object(target=joinpath(stage2_objpath, src), source='#'+src)
+
+        
+
+multiboot   = Target()

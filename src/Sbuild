@@ -1,7 +1,12 @@
 Init()
 
+APATH = joinpath('arch', kconfig.SRCARCH)
+ADIR = Dir(APATH)
+
+export(ADIR=ADIR)
+
 include('kernel')
-include(joinpath('arch',kconfig.SRCARCH))
+include(APATH)
 
 KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']
 

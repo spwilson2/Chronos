@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#include <chronos/kstdlib.h>
+//#include <chronos/kstdlib.h>
 #include <x86.h>
 #include <chronos/file.h>
 #include <chronos/stdlock.h>
@@ -12,7 +12,7 @@
 #include <chronos/drivers/serial.h>
 #include <chronos/fsman.h>
 #include <drivers/ata.h>
-#include <chronos/stdlib.h>
+//#include <chronos/stdlib.h>
 #include <chronos/drivers/console.h>
 #include <chronos/drivers/keyboard.h>
 #include <chronos/drivers/ext2.h>

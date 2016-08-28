@@ -5,11 +5,16 @@ from util import *
 from kconf_util import *
 from global_cheats import *
 from SCons.Script import Import as __Import
+from SCons.Script import ARGUMENTS
 import debug
 
 def Init(*args, **kwargs):
     __Import('kenv')
     __Import(*args)
+
+def build_path():
+    # Take a build directory
+    return ARGUMENTS.get('O', '')
 
 def include_path(path):
     return Dir(path)
@@ -36,6 +41,10 @@ from collections import UserList
 def is_list(item):
     type_ = type(item)
     return type_ is list or type_ is UserList
+
+def is_string(item):
+    type_ = type(item)
+    return type_ is str or type_ is type('')
 
 def InitSbuild():
     export(add_flags=add_flags)
