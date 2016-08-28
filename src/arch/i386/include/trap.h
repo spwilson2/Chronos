@@ -14,7 +14,7 @@
 
 #ifndef __ASM_ONLY__
 
-#include <chronos/k/trap.h>
+#include <chronos/trap.h>
 
 #define TF_REGISTERS (0x08 << 2)
 typedef char fpu128_t[16];

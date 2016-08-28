@@ -11,7 +11,7 @@
 #include <chronos/ktime.h>
 #include <chronos/drivers/rtc.h>
 #include <chronos/stdlock.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/x86.h>
 
 slock_t rtc_lock;

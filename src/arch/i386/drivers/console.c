@@ -8,8 +8,8 @@
 #include <string.h>
 
 #include <chronos/x86.h>
-#include <chronos/stdarg.h>
-#include <chronos/k/drivers/console.h>
+#include <stdarg.h>
+#include <chronos/drivers/console.h>
 
 #define MAX_NUM 15
 

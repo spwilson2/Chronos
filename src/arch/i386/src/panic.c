@@ -2,7 +2,7 @@
 #include <chronos/stdlock.h>
 #include <chronos/devman.h>
 #include <chronos/tty.h>
-#include <chronos/k/drivers/console.h>
+#include <chronos/drivers/console.h>
 #include <chronos/x86.h>
 
 void cprintf_init(void)

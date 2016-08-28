@@ -1,7 +1,7 @@
 #ifndef _ARCH_CONTEXT_H
 #define _ARCH_CONTEXT_H
 
-#include <chronos/k/context.h>
+#include <chronos/context.h>
 
 struct context
 {

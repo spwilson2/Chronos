@@ -12,14 +12,14 @@
 #include <chronos/cpu.h>
 #include <chronos/file.h>
 #include <chronos/stdlock.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/devman.h>
 #include <chronos/fsman.h>
 #include <chronos/tty.h>
 #include <chronos/pipe.h>
 #include <chronos/proc.h>
 #include <chronos/vm.h>
-#include <chronos/k/vm.h>
+#include <chronos/vm.h>
 #include <chronos/panic.h>
 
 // #define DEBUG

@@ -13,7 +13,7 @@
 #include <chronos/stdlock.h>
 #include <chronos/devman.h>
 #include <chronos/tty.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/fsman.h>
 
 extern int video_mode;

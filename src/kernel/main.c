@@ -4,7 +4,7 @@
 
 #include <chronos/kstdlib.h>
 #include <chronos/file.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/stdlock.h>
 #include <chronos/fsman.h>
 #include <chronos/devman.h>
@@ -16,7 +16,7 @@
 #include <chronos/cpu.h>
 #include <chronos/ktime.h>
 #include <chronos/trap.h>
-#include <chronos/signal.h>
+#include <signal.h>
 #include <chronos/cacheman.h>
 
 void main_stack(void);

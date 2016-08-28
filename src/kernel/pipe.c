@@ -9,7 +9,7 @@
 #include <string.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/stdlock.h>
 #include <chronos/pipe.h>
 #include <chronos/file.h>

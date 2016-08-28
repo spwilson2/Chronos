@@ -16,7 +16,7 @@
 #include <chronos/devman.h>
 #include <chronos/fsman.h>
 #include <chronos/tty.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/stdlib.h>
 #include <chronos/panic.h>
 #include <chronos/pipe.h>
@@ -25,16 +25,16 @@
 #include <chronos/storagecache.h>
 #include <chronos/cpu.h>
 #include <chronos/vm.h>
-#include <chronos/k/netman.h>
+#include <chronos/netman.h>
 #include <chronos/device.h>
 #include <chronos/drivers/ata.h>
 #include <chronos/drivers/pic.h>
 #include <chronos/drivers/fpu.h>
 #include <chronos/drivers/cmos.h>
 #include <chronos/drivers/pit.h>
-#include <chronos/k/drivers/keyboard.h>
-#include <chronos/k/drivers/serial.h>
-#include <chronos/k/drivers/console.h>
+#include <chronos/drivers/keyboard.h>
+#include <chronos/drivers/serial.h>
+#include <chronos/drivers/console.h>
 
 extern int video_mode;
 extern uchar serial_connected;

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <chronos/vm.h>
-#include <chronos/k/vm.h>
+#include <chronos/vm.h>
 #include <chronos/panic.h>
 #include <chronos/stdlock.h>
 #include <chronos/file.h>

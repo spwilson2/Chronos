@@ -1,0 +1,6 @@
+Init()
+
+include('kernel')
+include(joinpath('arch',kconfig.SRCARCH))
+
+kenv.Program(target='kernel.o', source=kobj['y'])

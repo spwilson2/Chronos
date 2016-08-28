@@ -6,10 +6,10 @@
 #include <chronos/devman.h>
 #include <chronos/panic.h>
 #include <chronos/iosched.h>
-#include <chronos/stdarg.h>
-#include <chronos/stdlib.h>
+#include <stdarg.h>
+//#include <chronos/stdlib.h>
 #include <chronos/proc.h>
-#include <chronos/fcntl.h>
+//#include <chronos/fcntl.h>
 #include <chronos/tty.h>
 #include <chronos/drivers/serial.h>
 #include <chronos/drivers/console.h>

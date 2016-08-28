@@ -14,13 +14,13 @@
 #include <chronos/devman.h>
 #include <chronos/proc.h>
 #include <chronos/vm.h>
-#include <chronos/k/vm.h>
-#include <chronos/stdarg.h>
+#include <chronos/vm.h>
+#include <stdarg.h>
 #include <chronos/panic.h>
 #include <chronos/context.h>
 
 /* We need some graphics config for bootup */
-#include <chronos/k/drivers/console.h>
+#include <chronos/drivers/console.h>
 
 context_t k_context; /* The kernel context */
 pstack_t k_stack; /* Kernel stack */

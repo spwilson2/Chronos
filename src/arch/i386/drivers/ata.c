@@ -18,7 +18,7 @@
 #include <chronos/drivers/ata.h>
 #include <chronos/x86.h>
 #include <chronos/panic.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/fsman.h>
 #include <chronos/storagecache.h>
 

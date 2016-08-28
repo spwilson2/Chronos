@@ -48,7 +48,7 @@ int log2_linux(int value)
 #include <string.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/panic.h>
 
 #define log2 __log2

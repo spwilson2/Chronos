@@ -15,7 +15,7 @@ typedef unsigned long ulong;
 #include <string.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/stdarg.h>
+#include "stdarg.h"
 #define _strncpy strncpy
 #endif
 

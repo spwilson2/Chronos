@@ -10,7 +10,7 @@
 #include <chronos/tty.h>
 #include <chronos/fsman.h>
 #include <chronos/proc.h>
-#include <chronos/signal.h>
+#include <signal.h>
 #include <chronos/syscall.h>
 
 // #define DEBUG

@@ -1,0 +1,27 @@
+Init()
+
+RELOCATE_FLAGS = ['-m elf_i386', '-r']
+
+# Create a copy of the kernel environment so we don't have to carry the arch
+# include path with use manually by exporting it.
+arch_env = kenv.Clone()
+add_include_path(arch_env, 'include')
+add_global_env(arch_env=arch_env)
+
+arch_obj = Target()
+export(arch_obj=arch_obj)
+
+include('./signal')
+include('./syscall')
+include('./src')
+include('./context')
+include('./x86')
+include('./trap')
+include('./lock')
+include('./vm')
+include('./drivers')
+include('./boot')
+include('./proc')
+
+
+include('./tools')

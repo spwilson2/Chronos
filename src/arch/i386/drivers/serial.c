@@ -8,7 +8,7 @@
 #include <chronos/stdlock.h>
 #include <chronos/devman.h>
 #include <chronos/x86.h>
-#include <chronos/k/drivers/serial.h>
+#include <chronos/drivers/serial.h>
 #include <chronos/drivers/pic.h>
 
 #define COM1_DATA 			0x03F8

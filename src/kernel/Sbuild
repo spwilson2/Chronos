@@ -1,0 +1,9 @@
+Init()
+
+include('syscall')
+include('cache')
+include('vm')
+include('drivers')
+include('proc')
+
+kobj['y'] = kenv.Object(Glob('*.c'))

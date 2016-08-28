@@ -20,9 +20,9 @@
 #include <chronos/vm.h>
 #include <chronos/trap.h>
 #include <chronos/panic.h>
-#include <chronos/signal.h>
+#include <signal.h>
 #include <chronos/elf.h>
-#include <chronos/sched.h>
+#include <sched.h>
 
 // #define DEBUG
 

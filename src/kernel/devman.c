@@ -8,7 +8,7 @@
 #include <chronos/fsman.h>
 #include <chronos/pipe.h>
 #include <chronos/device.h>
-#include <chronos/vm.h>
+#include <vm.h>
 #include <chronos/panic.h>
 
 static slock_t device_table_lock;

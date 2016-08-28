@@ -10,7 +10,7 @@
 #include <chronos/x86.h>
 #include <chronos/panic.h>
 #include <chronos/drivers/pic.h>
-#include <chronos/k/drivers/keyboard.h>
+#include <chronos/drivers/keyboard.h>
 
 /** Uncomment this line for debugging */
 // #define DEBUG

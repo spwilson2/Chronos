@@ -1,0 +1,3 @@
+[submodule "src/site_scons/Kconfiglib"]
+	path = src/site_scons/Kconfiglib
+	url = https://github.com/spwilson2/Kconfiglib

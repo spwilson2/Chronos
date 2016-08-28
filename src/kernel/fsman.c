@@ -15,7 +15,7 @@
 #include <chronos/devman.h>
 #include <chronos/fsman.h>
 #include <chronos/panic.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/pipe.h>
 #include <chronos/tty.h>
 #include <chronos/chronos.h>

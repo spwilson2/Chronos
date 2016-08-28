@@ -1,7 +1,7 @@
 #ifndef _DISKIO_H_
 #define _DISKIO_H_
 
-#include "fsman.h"
+#include <chronos/fsman.h>
 
 int storageio_readsect(sect_t start_sect, void* src, size_t sz, 
 		struct StorageDevice* device);

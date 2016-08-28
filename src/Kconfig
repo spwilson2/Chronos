@@ -1,0 +1,6 @@
+config SRCARCH
+    string
+    default 'i386'
+
+#source "kernel/Kconfig"
+source "arch/$SRCARCH/Kconfig"

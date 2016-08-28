@@ -8,10 +8,10 @@
 #include <stdint.h>
 #include <dirent.h>
 
-#include "file.h"
-#include "stdlock.h"
-#include "cache.h"
-#include "devman.h"
+#include <chronos/file.h>
+#include <chronos/stdlock.h>
+#include <chronos/cache.h>
+#include <chronos/devman.h>
 
 #define FS_INODE_CACHE_SZ 0x10000 /* Per file system cache */
 

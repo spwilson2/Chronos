@@ -1,0 +1,3 @@
+Init()
+
+kobj['y'] += kenv.Object(Glob('*.c'))

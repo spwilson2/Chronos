@@ -1,0 +1,117 @@
+from SCons.Script import *
+import re
+import os
+
+InitSbuild()
+
+O = getenv('O')
+if O is None:
+    O=''
+
+Phony(  
+        allyesconfig=allyesconfig,
+        defconfig=defconfig,
+        # Clean target needs to also set the environment variable O since it's
+        # not exported..
+        clean=['O='+ O +' scons -c', 'rm site_scons/*.pyc'],
+        auto=None,
+        TEST=None
+     )
+
+# If we are just building a config ignore everything else..
+for target in BUILD_TARGETS:
+    if re.search('.*config$', target):
+        Return()
+
+# Get the kconfig, and make it globally accessable throughout the build.
+kconfig = get_dotconfig()
+kconfig = kconfiglib_to_config_obj(kconfig)
+export(kconfig=kconfig)
+os.putenv('BUILD_ARCH', kconfig.ARCH)
+
+
+TOOL_DIR = '../../tools/bin'
+
+def crosstool_path(tool):
+    prefix = kconfig.CROSS_COMPILE
+    return joinpath(TOOL_DIR, prefix+tool)
+
+CROSS_CC        = crosstool_path('gcc')
+CROSS_LD        = crosstool_path('ld')
+CROSS_AS        = crosstool_path('gcc')
+CROSS_OBJCOPY   = crosstool_path('objcopy')
+
+HOST_CC         = 'gcc'#'/home/s/swilson/Projects/chronos/test.sh'
+HOST_LD         = 'ld'
+HOST_AS         = 'gcc'
+HOST_OBJCOPY    = 'objcopy'
+
+# TODO: Debug mode, both by config or cli flag.
+
+CROSS_CCFLAGS = [
+         '-ggdb', 
+         '-Werror', 
+         '-Wall', 
+         '-gdwarf-2', 
+         '-fno-common',
+         '-fno-builtin', 
+         '-fno-stack-protector',
+         '-DARCH_' + kconfig.ARCH, 
+         '-DARCH_STR=' + kconfig.ARCH,
+         ]
+
+ASFLAGS = [
+       '-ggdb',
+       '-Werror',
+       '-Wall',
+       '-DARCH_' + kconfig.ARCH,
+       '-DARCH_STR=' + kconfig.ARCH
+       ]
+
+QEMU = 'qemu-system-' + kconfig.ARCH
+
+generic_env = Environment()
+
+# Create and export our kernel and host environment.
+host_env = generic_env.Clone(
+        CC=HOST_CC,
+        LD=HOST_LD,
+        OBJCOPY=HOST_OBJCOPY,
+        #CCFLAGS=CCFLAGS, 
+        ASFLAGS=ASFLAGS,
+        )
+
+kenv = generic_env.Clone(
+        CC=CROSS_CC,
+        LD=CROSS_LD,
+        OBJCOPY=CROSS_OBJCOPY,
+        CCFLAGS=CROSS_CCFLAGS, 
+        ASFLAGS=ASFLAGS,
+        CPPPATH=[include_path('include')]#,'../../newlib/newlib/libc/sys/chronos/']
+        )
+add_global_env(kenv=kenv, host_env=host_env)
+
+# Create our kernel target.
+kobj = Target()
+export(kobj=kobj)
+
+
+
+# The first build needs to be put into the 'build' variant_dir
+SConscript('Sbuild', exports='kenv', variant_dir=O)
+Clean('.', O)
+
+if 'TEST' in BUILD_TARGETS:
+
+    #print('kconfig dict', str(kconfig.__dict__))
+    # Options not listed in the .config should return n
+    assert(kconfig.not_a_option == 'n')
+
+
+    # Proof we can do Depends() with just filenames. 
+    # Will be particularly useful for tools.
+    env = Environment()
+    
+    env.Command(source=None, target='../b', action='printf "\\n"')
+    env.Command(source=None, target='a', action='ls')
+    Depends('a', '../b')

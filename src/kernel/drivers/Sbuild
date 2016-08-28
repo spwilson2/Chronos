@@ -1,0 +1,5 @@
+Init()
+
+include('vt102')
+
+kobj['y'] += kenv.Object(Glob('*.c'))

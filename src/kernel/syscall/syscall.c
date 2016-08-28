@@ -14,7 +14,7 @@
 #include <chronos/cpu.h>
 #include <chronos/tty.h>
 #include <chronos/elf.h>
-#include <chronos/stdarg.h>
+#include <stdarg.h>
 #include <chronos/syscall.h>
 #include <chronos/panic.h>
 #include <chronos/reboot.h>
