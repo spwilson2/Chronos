@@ -1,5 +1,7 @@
+//TODO: FIXME
+#define ARCH_i386
 #ifdef ARCH_i386
-#include "../../kernel/arch/i386/include/vm.h"
+#include <vm.h>
 #else
 #error "Invalid architecture."
 #endif

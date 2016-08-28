@@ -49,9 +49,9 @@ def is_string(item):
 def InitSbuild():
     export(add_flags=add_flags)
 
-#def export(**kwargs):
-#    for key, val in kwargs.items():
-#        os.environ[key] = val
+def EnvExport(**kwargs):
+    for key, val in kwargs.items():
+        os.environ[key] = val
 
 def import_tool(path, tool):
     """Import a tool from a directory path"""

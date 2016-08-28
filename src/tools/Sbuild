@@ -1,0 +1,9 @@
+Init()
+
+tools_env = host_env.Clone()
+
+add_flags(tools_env, CLFAGS=['-D__LINUX__', '-DARCH_'+kconfig.ARCH])
+add_include_path(tools_env, '../include')
+
+#boot_imager = Tool('boot-imager', 'boot-imager.c', usage='$TOOLPATH $SOURCE -o $TARGET', env=tools_env)
+#Clean(boot_imager, 'boot-stage2.o.text')
