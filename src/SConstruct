@@ -68,6 +68,7 @@ QEMU = 'qemu-system-' + kconfig.ARCH
 
 export(CROSS_LD=CROSS_LD)
 generic_env = Environment()
+#add_flags(generic_env, OBJPREFIX='.S')
 #add_flags(generic_env, ENV={'CROSS_LD':CROSS_LD})
 
 # Create and export our kernel and host environment.

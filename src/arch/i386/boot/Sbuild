@@ -22,14 +22,14 @@ boot_stage2_deps = {
     },
 
     ADIR.path: {
-        'vm':       ['asm.S', 'pgdir', 'vm_alloc'],
+        'vm':       ['asm', 'pgdir', 'vm_alloc'],
         'drivers':  ['pic', 'ata', 'serial'],
-        'x86':      ['asm.S'],
+        'x86':      ['asm'],
         'src':      ['cpu'],
         'lock':     ['stdlock'],
     },
 
-    Dir('stage2').path:       ['stage2', 'stage2_jmp.S', 'vm']
+    Dir('stage2').path:       ['stage2', 'stage2_jmp', 'vm']
 }
 
 
@@ -57,16 +57,15 @@ def append_paths(dep_dict, base_path=None):
 
     return end_list
 
-stage2_objpath = 'boot-stage2.build'
+BOOT_OBJPATH = 'boot-stage2.build'
 
 boot_stage2 = Target()
-stage2_env = arch_env.Clone()
-stage2_env.VariantDir(stage2_objpath, '#') 
+boot_env = arch_env.Clone()
+boot_env.VariantDir(BOOT_OBJPATH, '#') 
 
 for src in append_paths(boot_stage2_deps):
-    #print(joinpath(stage2_objpath, src))
-    print(src)
-    boot_stage2['y'] += stage2_env.Object(target=joinpath(stage2_objpath, src), source='#'+src)
+    src = Glob('#'+src+'.[Sc]')[0].path
+    boot_stage2['y'] += boot_env.Object(target=joinpath(BOOT_OBJPATH, src + '.o'), source='#'+src)
 
 boot_imager = import_tool('../tools/', 'boot-imager')
 
@@ -74,4 +73,10 @@ boot_imager = import_tool('../tools/', 'boot-imager')
 boot_imager(['boot-stage2.img', '#boot-stage2.o.rodata', '#boot-stage2.o.text',
 '#boot-stage2.o.data', '#boot-stage2.o'], boot_stage2['y'])
         
-multiboot   = Target()
+multiboot = Target()
+
+#multiboot['y'] += boot_stage2['y']
+multiboot['y'] += boot_env.Object(Glob(joinpath('multiboot', '*.c')))
+#multiboot['y'] = boot_stage2['y']
+
+boot_env.Program('multiboot.o', multiboot['y'])
