@@ -1,7 +1,7 @@
 #include <chronos/panic.h>
 #include <chronos/vm.h>
 #include <chronos/trap.h>
-#include <chronos/idt.h>
+#include <idt.h>
 
 extern pstack_t k_stack;
 

@@ -1,6 +1,6 @@
 #define __ASM_ONLY__
-#include <chronos/x86.h>
-#include <chronos/chronos.h>
+#include <x86.h>
+#include <chronos.h>
 #include <chronos/vm.h>
 
 # Load the kernel and jump into it.

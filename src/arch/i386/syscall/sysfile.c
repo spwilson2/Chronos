@@ -4,7 +4,7 @@
 #include <chronos/proc.h>
 #include <chronos/syscall.h>
 #include <chronos/ktime.h>
-#include <chronos/drivers/rtc.h>
+#include <drivers/rtc.h>
 
 int sys_select_next_fd(int curr_fd, fd_set* set, int max_fd)
 {

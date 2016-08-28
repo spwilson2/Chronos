@@ -14,7 +14,7 @@
 
 #include <chronos/kstdlib.h>
 #include <chronos/ksignal.h>
-#include <chronos/x86.h>
+#include <x86.h>
 #include <stdarg.h>
 #include <chronos/stdlock.h>
 #include <chronos/trap.h>
@@ -27,7 +27,7 @@
 #include <chronos/panic.h>
 #include <chronos/vm.h>
 #include <chronos/cpu.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 
 //#define DEBUG
 

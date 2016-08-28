@@ -9,10 +9,10 @@
 
 #include <chronos/kstdlib.h>
 #include <chronos/ktime.h>
-#include <chronos/drivers/rtc.h>
+#include <drivers/rtc.h>
 #include <chronos/stdlock.h>
 #include <stdarg.h>
-#include <chronos/x86.h>
+#include <x86.h>
 
 slock_t rtc_lock;
 struct rtc_t k_time;

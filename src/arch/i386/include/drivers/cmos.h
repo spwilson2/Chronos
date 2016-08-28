@@ -1,7 +1,7 @@
 #ifndef _CMOS_H_
 #define _CMOS_H_
 
-#include <chronos/x86.h>
+#include <x86.h>
 
 /**
  * Init the cmos chip. This will disable NMI by default. 

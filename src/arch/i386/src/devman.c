@@ -10,14 +10,14 @@
 #include <stdio.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/x86.h>
+#include <x86.h>
 #include <chronos/file.h>
 #include <chronos/stdlock.h>
 #include <chronos/devman.h>
 #include <chronos/fsman.h>
 #include <chronos/tty.h>
 #include <stdarg.h>
-#include <chronos/stdlib.h>
+#include <stdlib.h>
 #include <chronos/panic.h>
 #include <chronos/pipe.h>
 #include <chronos/proc.h>
@@ -27,11 +27,11 @@
 #include <chronos/vm.h>
 #include <chronos/netman.h>
 #include <chronos/device.h>
-#include <chronos/drivers/ata.h>
-#include <chronos/drivers/pic.h>
-#include <chronos/drivers/fpu.h>
-#include <chronos/drivers/cmos.h>
-#include <chronos/drivers/pit.h>
+#include <drivers/ata.h>
+#include <drivers/pic.h>
+#include <drivers/fpu.h>
+#include <drivers/cmos.h>
+#include <drivers/pit.h>
 #include <chronos/drivers/keyboard.h>
 #include <chronos/drivers/serial.h>
 #include <chronos/drivers/console.h>

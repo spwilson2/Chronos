@@ -10,8 +10,8 @@
 #include <chronos/kstdlib.h>
 #include <chronos/proc.h>
 #include <chronos/panic.h>
-#include <chronos/drivers/cmos.h>
-#include <chronos/drivers/rtc.h>
+#include <drivers/cmos.h>
+#include <drivers/rtc.h>
 #include <chronos/ktime.h>
 
 // #define DEBUG

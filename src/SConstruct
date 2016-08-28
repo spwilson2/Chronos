@@ -84,6 +84,7 @@ host_env = generic_env.Clone(
 kenv = generic_env.Clone(
         CC=CROSS_CC,
         LD=CROSS_LD,
+        LINK=CROSS_LD,
         OBJCOPY=CROSS_OBJCOPY,
         CCFLAGS=CROSS_CCFLAGS, 
         ASFLAGS=ASFLAGS,

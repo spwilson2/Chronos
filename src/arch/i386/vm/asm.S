@@ -1,6 +1,6 @@
 #define __ASM_ONLY__
 #include <chronos/vm.h>
-#include <chronos/x86.h>
+#include <x86.h>
 
 /* void vm_enable_paging(pgdir_t* pgdir)*/
 .globl vm_enable_paging

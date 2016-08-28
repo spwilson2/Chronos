@@ -1,6 +1,6 @@
 #include <string.h>
 
-#include <chronos/drivers/rtc.h>
+#include <drivers/rtc.h>
 #include <chronos/ktime.h>
 #include <chronos/stdlock.h>
 #include <chronos/proc.h>

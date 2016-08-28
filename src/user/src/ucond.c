@@ -1,5 +1,5 @@
 #include "types.h"
-#include "stdlock.h"
+#include "chronos/stdlock.h"
 
 void cond_init(cond_t* c)
 {

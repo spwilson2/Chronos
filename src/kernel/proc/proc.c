@@ -23,7 +23,7 @@
 #include <chronos/panic.h>
 #include <stdarg.h>
 #include <chronos/syscall.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 #include <chronos/iosched.h>
 #include <time.h>
 #include <chronos/context.h>

@@ -6,14 +6,15 @@
 #include <sys/types.h>
 #include <sys/sched.h>
 
-#include <chronos/chronos.h>
+#include <chronos.h>
 #include <chronos/trap.h>
 #include <chronos/proc.h>
 #include <chronos/stdlock.h>
 #include <chronos/syscall.h>
 #include <chronos/ktime.h>
-#include <chronos/x86.h>
-#include <chronos/drivers/rtc.h>
+#include <x86.h>
+#include <context.h>
+#include <drivers/rtc.h>
 #include <chronos/elf.h>
 #include <chronos/panic.h>
 

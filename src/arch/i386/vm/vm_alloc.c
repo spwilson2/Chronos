@@ -8,7 +8,7 @@
 #include <string.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/x86.h>
+#include <x86.h>
 #include <chronos/cpu.h>
 #include <chronos/file.h>
 #include <chronos/stdlock.h>

@@ -9,9 +9,9 @@
 #include <stdio.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/drivers/cmos.h>
+#include <drivers/cmos.h>
 #include <chronos/stdlock.h>
-#include <chronos/drivers/rtc.h>
+#include <drivers/rtc.h>
 #include <chronos/panic.h>
 
 void rtc_update(struct rtc_t* dst)

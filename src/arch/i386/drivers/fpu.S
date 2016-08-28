@@ -1,5 +1,5 @@
 #define __ASM_ONLY__
-#include <chronos/x86.h>
+#include <x86.h>
 
 # void fpu_init(void)
 .globl fpu_init

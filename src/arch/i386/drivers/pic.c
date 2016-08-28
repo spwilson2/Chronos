@@ -4,8 +4,8 @@
  * Driver for the 80*86 Programmable Interrupt Controller.
  */
 
-#include <chronos/x86.h>
-#include <chronos/drivers/pic.h>
+#include <x86.h>
+#include <drivers/pic.h>
 #include <chronos/panic.h>
 
 #define PORT_PIC_MASTER_COMMAND 	0x0020

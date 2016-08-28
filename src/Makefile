@@ -180,7 +180,7 @@ deploy-base: clean
 	scp -P 8081 ./chronos-deploy.tar ubuntu@localhost:/home/ubuntu/Chronos
 	rm -f chronos-deploy.tar
 	ssh ubuntu@localhost -p 8081 "/bin/build-gdb.sh"
-	scp -P 8081 ubuntu@localhost:/home/ubuntu/Chronos/chronos/chronos.img ./chronos.img
+	scp -P 8081 ubuntu@localhost:/home/ubuntu/Chronos/chronos.img ./chronos.img
 deploy-base-gdb: deploy-base
 	scp -P 8081 ubuntu@localhost:/home/ubuntu/Chronos/chronos/symbols.tar ./symbols.tar
 	tar xf symbols.tar

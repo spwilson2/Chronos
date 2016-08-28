@@ -1,6 +1,6 @@
 #include <chronos/cpu.h>
 #include <chronos/panic.h>
-#include <chronos/x86.h>
+#include <x86.h>
 
 int x86_check_interrupt(void);
 

@@ -1,8 +1,8 @@
 #include <string.h>
-#include <chronos/storageio.h>
+#include <chronos/drivers/storageio.h>
 #include <chronos/panic.h>
 #include <chronos/storagecache.h>
-#include <chronos/drivers/ata.h>
+#include <drivers/ata.h>
 #include <chronos/drivers/ext2.h>
 #include <chronos/drivers/lwfs.h>
 

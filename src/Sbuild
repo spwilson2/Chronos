@@ -3,4 +3,7 @@ Init()
 include('kernel')
 include(joinpath('arch',kconfig.SRCARCH))
 
-kenv.Program(target='kernel.o', source=kobj['y'])
+KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']
+
+add_flags(kenv, LINKFLAGS=KLINKFLAGS)
+kenv.Program(target='chronos.o', source=kobj['y'])

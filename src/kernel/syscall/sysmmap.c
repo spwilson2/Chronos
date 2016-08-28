@@ -7,7 +7,7 @@
 #include <chronos/tty.h>
 #include <chronos/proc.h>
 #include <chronos/vm.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 #include <chronos/panic.h>
 
 

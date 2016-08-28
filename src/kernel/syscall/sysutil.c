@@ -9,7 +9,7 @@
 #include <chronos/tty.h>
 #include <chronos/fsman.h>
 #include <chronos/proc.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 
 /** Check to see if an fd is valid */
 int fd_ok(int fd)

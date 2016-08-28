@@ -3,10 +3,10 @@
 
 #include <chronos/stdlock.h>
 #include <chronos/cpu.h>
-#include <chronos/x86.h>
-#include <chronos/drivers/pic.h>
+#include <x86.h>
+#include <drivers/pic.h>
 #include <chronos/panic.h>
-#include <chronos/drivers/cmos.h>
+#include <drivers/cmos.h>
 
 #define INT8_ENABLE_INTERVAL	0x40
 #define INT8_ENABLE_ALARM	0x20

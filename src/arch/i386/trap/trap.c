@@ -11,13 +11,13 @@
 #include <unistd.h>
 
 #include <chronos/kstdlib.h>
-#include <chronos/idt.h>
+#include <idt.h>
 #include <chronos/trap.h>
 #include <chronos/file.h>
 #include <chronos/stdlock.h>
 #include <chronos/devman.h>
-#include <chronos/chronos.h>
-#include <chronos/x86.h>
+#include <chronos.h>
+#include <x86.h>
 #include <chronos/panic.h>
 #include <stdarg.h>
 #include <chronos/syscall.h>
@@ -28,10 +28,10 @@
 #include <signal.h>
 #include <chronos/vm.h>
 #include <chronos/vm.h>
-#include <chronos/drivers/pic.h>
-#include <chronos/drivers/pit.h>
-#include <chronos/drivers/cmos.h>
-#include <chronos/drivers/rtc.h>
+#include <drivers/pic.h>
+#include <drivers/pit.h>
+#include <drivers/cmos.h>
+#include <drivers/rtc.h>
 
 #define TRAP_COUNT 256
 #define INTERRUPT_TABLE_SIZE (sizeof(struct int_gate) * TRAP_COUNT)

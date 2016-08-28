@@ -4,7 +4,7 @@
 
 #define PGSIZE 4096
 #include "kern/types.h"
-#include "stdlock.h"
+#include "chronos/stdlock.h"
 #include "file.h"
 #include "fsman.h"
 #include "drivers/lwfs.h"

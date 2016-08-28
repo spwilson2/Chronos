@@ -1,4 +1,4 @@
 Init()
 
-arch_obj['y'] += arch_env.Object(Glob('*.c'))
-kobj['y'] += arch_env.Object(Glob('*.c'))
+arch_obj['y'] += arch_env.Object(Glob('*.[cS]'))
+

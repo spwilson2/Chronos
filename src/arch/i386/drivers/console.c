@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <chronos/x86.h>
+#include <x86.h>
 #include <stdarg.h>
 #include <chronos/drivers/console.h>
 

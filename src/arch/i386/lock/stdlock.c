@@ -5,8 +5,8 @@
  * A standard lock library implementation.
  */
 
-#include <stdlock.h>
-#include <chronos/x86.h>
+#include <chronos/stdlock.h>
+#include <x86.h>
 
 void slock_acquire(slock_t* lock)
 {

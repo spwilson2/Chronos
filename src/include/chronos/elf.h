@@ -2,7 +2,7 @@
 #define _ELF_H_
 
 #include <stdint.h>
-#include "stdlock.h"
+#include "chronos/stdlock.h"
 #include "fsman.h"
 #include "vm.h"
 

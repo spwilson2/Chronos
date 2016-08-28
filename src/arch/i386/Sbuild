@@ -1,15 +1,18 @@
 Init()
 
-RELOCATE_FLAGS = ['-m elf_i386', '-r']
+RELOCATE_FLAGS = ['-melf_i386', '-r']
 
 # Create a copy of the kernel environment so we don't have to carry the arch
 # include path with use manually by exporting it.
 arch_env = kenv.Clone()
 add_include_path(arch_env, 'include')
+add_flags(arch_env, ASFLAGS='-D__BOOT_STRAP__')
 add_global_env(arch_env=arch_env)
 
 arch_obj = Target()
 export(arch_obj=arch_obj)
+
+include('./tools')
 
 include('./signal')
 include('./syscall')
@@ -23,5 +26,6 @@ include('./drivers')
 include('./boot')
 include('./proc')
 
+add_flags(arch_env, LINKFLAGS=RELOCATE_FLAGS)
+kobj['y'] += arch_env.Program(target='arch.o', source=arch_obj['y'])
 
-include('./tools')

@@ -9,7 +9,7 @@
 #include <chronos/fsman.h>
 #include <chronos/netman.h>
 #include <chronos/syscall.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 #include <chronos/pipe.h>
 #include <chronos/tty.h>
 #include <chronos/proc.h>

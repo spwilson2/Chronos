@@ -3,7 +3,7 @@
 #include <chronos/devman.h>
 #include <chronos/tty.h>
 #include <chronos/drivers/console.h>
-#include <chronos/x86.h>
+#include <x86.h>
 
 void cprintf_init(void)
 {

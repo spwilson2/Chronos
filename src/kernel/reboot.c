@@ -2,7 +2,7 @@
 
 #include <chronos/panic.h>
 #include <chronos/proc.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 
 #if 0
 static int still_up()

@@ -14,7 +14,7 @@
 #include <chronos/tty.h>
 #include <chronos/pipe.h>
 #include <chronos/syscall.h>
-#include <chronos/chronos.h>
+#include <chronos.h>
 #include <chronos/proc.h>
 #include <chronos/panic.h>
 
