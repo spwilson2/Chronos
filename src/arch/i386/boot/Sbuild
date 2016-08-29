@@ -67,7 +67,7 @@ for src in append_paths(boot_stage2_deps):
     src = Glob('#'+src+'.[Sc]')[0].path
     boot_stage2['y'] += boot_env.Object(target=joinpath(BOOT_OBJPATH, src + '.o'), source='#'+src)
 
-boot_imager = import_tool('../tools/', 'boot-imager')
+boot_imager = import_tool('tools/', 'boot-imager')
 
 # List all the dependencies created when using the imager.
 boot_imager(['boot-stage2.img', '#boot-stage2.o.rodata', '#boot-stage2.o.text',

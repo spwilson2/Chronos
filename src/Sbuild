@@ -11,6 +11,5 @@ include(APATH)
 KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']
 
 add_flags(kenv, LINKFLAGS=KLINKFLAGS)
-kenv.Program(target='chronos.o', source=kobj['y'])
-
-
+chronos = kenv.Program(target='chronos.o', source=kobj['y'])
+Default(chronos)

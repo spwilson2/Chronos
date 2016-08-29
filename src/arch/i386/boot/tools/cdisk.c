@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <sys/fcntl.h>
 
-#include "mbr.h"
+#include <chronos/mbr.h>
 
 #define VERSION_MINOR 0
 #define VERSION_MAJOR 1

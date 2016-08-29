@@ -1,17 +1,7 @@
 Init()
 
-
 tools_env = host_env.Clone()
 add_flags(tools_env, CFLAGS=['-D__LINUX__', '-m32'])
 add_flags(tools_env, LINKFLAGS=['-D__LINUX__', '-m32'])
 
 mkvect = Tool('mkvect', 'mkvect.c', usage='$TOOLPATH > $TARGET', env=tools_env)
-
-#boot_sign = Tool('mkvect', 'mkvect.c', usage='$TOOLPATH $TARGET', env=tools_env)
-#boot2_verify = Tool('mkvect', 'mkvect.c', usage='$TOOLPATH $TARGET', env=tools_env)
-
-imager_env = tools_env.Clone()
-add_include_path(imager_env, '#include')
-
-# TODO: Make a cleaner way of exporting CROSS_LD through scons ENV
-boot_imager = Tool('boot-imager', 'boot-imager.c', usage='CROSS_LD='+CROSS_LD+' $TOOLPATH $SOURCES -o $TARGET', env=imager_env)

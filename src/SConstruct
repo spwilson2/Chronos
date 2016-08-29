@@ -104,7 +104,8 @@ Clean('.', build_path())
 
 # Add the phony target to create the tools, must be after SConscript call so we
 # know that tools exist.
-Phony(tools=BUILD_TARGETS.extend(TOOL_PROGRAMS))
+Alias('tools', TOOL_PROGRAMS)
+
 
 if 'TEST' in BUILD_TARGETS:
 
