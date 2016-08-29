@@ -6,4 +6,9 @@ add_flags(tools_env, CLFAGS=['-D__LINUX__', '-DARCH_'+kconfig.ARCH])
 add_include_path(tools_env, '../include')
 
 #boot_imager = Tool('boot-imager', 'boot-imager.c', usage='$TOOLPATH $SOURCE -o $TARGET', env=tools_env)
+
+cdisk = Tool('cdisk', 'cdisk.c', usage='echo "yes" | $TOOLPATH
+--part1=$FS_START,$FS_DD_COUNT,$FS_TYPE,EXT2 -s $DISK_SZ -l 512 -b $STAGE1_PATH
+--stage2=$STAGE2_PATH,1,$STAGE2_SECTORS $TARGET')
+
 #Clean(boot_imager, 'boot-stage2.o.text')

@@ -102,6 +102,10 @@ export(KDIR=KDIR)
 SConscript('Sbuild', exports='kenv', variant_dir=build_path())
 Clean('.', build_path())
 
+# Add the phony target to create the tools, must be after SConscript call so we
+# know that tools exist.
+Phony(tools=BUILD_TARGETS.extend(TOOL_PROGRAMS))
+
 if 'TEST' in BUILD_TARGETS:
 
     #print('kconfig dict', str(kconfig.__dict__))

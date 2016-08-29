@@ -59,22 +59,25 @@ def import_tool(path, tool):
     Import(tool)
     return globals()[tool]
 
-tools = {}
+__tools = {}
+
+TOOL_PROGRAMS = []
 
 def Tool(target, sources, usage=None ,env=None):
     """Define a tool that is used to generate sources."""
 
-    if target in tools:
+    if target in __tools:
         if debug.enabled():
             debug.debug_print(__name__, ': ', target, 'has already been built, '
-                    'returning: ', str(tools[target]), 'as Tool.')
-        return tools[target]
+                    'returning: ', str(__tools[target]), 'as Tool.')
+        return __tools[target]
 
     if env is None:
         env = local_globals['host_env']
 
 
     tool = env.Program(target, sources)[0]
+    TOOL_PROGRAMS.append(tool)
 
     if usage is None:
         usage = tool.abspath + ' $SOURCE $TARGET'
@@ -99,7 +102,7 @@ def Tool(target, sources, usage=None ,env=None):
     globals()[target] = tool_object
 
     # Add the tool to build targets, so we don't rebuild when importing.
-    tools[target] = tool_object
+    __tools[target] = tool_object
 
     # Export the tool so we can Import it when we need to import_tool
     Export(target)
