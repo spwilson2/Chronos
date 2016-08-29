@@ -8,7 +8,7 @@ boot_stage1_obj = Target()
 
 boot_stage1_obj['y'] += Glob(joinpath('stage1','*.[Sc]'))
 
-stage1_env.Program('boot-stage1.o', boot_stage1_obj['y'])
+boot_stage1_obj = stage1_env.Program('boot-stage1.o', boot_stage1_obj['y'])
 
 boot_stage2_deps = {
 
@@ -70,7 +70,7 @@ for src in append_paths(boot_stage2_deps):
 boot_imager = import_tool('tools/', 'boot-imager')
 
 # List all the dependencies created when using the imager.
-boot_imager(['boot-stage2.img', '#boot-stage2.o.rodata', '#boot-stage2.o.text',
+boot_stage2_obj =boot_imager(['boot-stage2.img', '#boot-stage2.o.rodata', '#boot-stage2.o.text',
 '#boot-stage2.o.data', '#boot-stage2.o'], boot_stage2['y'])
         
 multiboot = Target()
@@ -80,3 +80,6 @@ multiboot['y'] += boot_env.Object(Glob(joinpath('multiboot', '*.c')))
 #multiboot['y'] = boot_stage2['y']
 
 boot_env.Program('multiboot.o', multiboot['y'])
+
+cdisk = import_tool('tools', 'cdisk')
+cdisk(target='#chronos.img', source=[boot_stage1_obj, boot_stage2_obj])

@@ -11,5 +11,11 @@ include(APATH)
 KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']
 
 add_flags(kenv, LINKFLAGS=KLINKFLAGS)
-chronos = kenv.Program(target='chronos.o', source=kobj['y'])
-Default(chronos)
+kobj = kenv.Program(target='chronos.o', source=kobj['y'])
+
+Default(kobj)
+
+Tool('hello.sh', None, '$TOOLPATH')
+
+# The boot item needs to be the last thing built
+include(joinpath('arch', 'i386', 'boot'))

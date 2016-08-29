@@ -72,12 +72,17 @@ def Tool(target, sources, usage=None ,env=None):
                     'returning: ', str(__tools[target]), 'as Tool.')
         return __tools[target]
 
+
     if env is None:
         env = local_globals['host_env']
 
-
-    tool = env.Program(target, sources)[0]
-    TOOL_PROGRAMS.append(tool)
+    if sources is None:
+        debug.debug_print(__name__, ': ', target, 'listed `None` as a source,'
+                'assuming source is already exectuable')
+        tool = File(target)
+    else:
+        tool = env.Program(target, sources)[0]
+        TOOL_PROGRAMS.append(tool)
 
     if usage is None:
         usage = tool.abspath + ' $SOURCE $TARGET'
