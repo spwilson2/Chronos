@@ -1,0 +1,19 @@
+config FS_START
+    int
+    default 2048
+
+config FS_DD_COUNT
+    int
+    default 2097152
+
+config FS_TYPE
+    string
+    default "ext2.img"
+
+config DISK_SZ
+    int
+    default 1074790400
+
+config BOOT_STAGE2_SECTORS
+    int
+    default 140

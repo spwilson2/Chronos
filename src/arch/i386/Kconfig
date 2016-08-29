@@ -11,3 +11,5 @@ config CROSS_COMPILE
 config ARCH
     string "The target architecture of the build"
     default "i386"
+
+source "arch/i386/boot/Kconfig"
