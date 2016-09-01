@@ -112,6 +112,8 @@ def Tool(target, sources, usage=None ,env=None):
     # Export the tool so we can Import it when we need to import_tool
     Export(target)
 
+    return __tools[target]
+
 
 class Target(object):
     def __init__(self):

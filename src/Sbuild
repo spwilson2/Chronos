@@ -12,6 +12,7 @@ KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']
 
 add_flags(kenv, LINKFLAGS=KLINKFLAGS)
 kobj = kenv.Program(target='chronos.o', source=kobj['y'])
+export(kobj=kobj)
 
 Default(kobj)
 

@@ -42,6 +42,9 @@ HOST_LD         = 'ld'
 HOST_AS         = 'gcc'
 HOST_OBJCOPY    = 'objcopy'
 
+USER = os.getenv('USER')
+export(USER=USER)
+
 # TODO: Debug mode, both by config or cli flag.
 
 CROSS_CCFLAGS = [
@@ -76,7 +79,6 @@ host_env = generic_env.Clone(
         CC=HOST_CC,
         LD=HOST_LD,
         OBJCOPY=HOST_OBJCOPY,
-        #CCFLAGS=CCFLAGS, 
         ASFLAGS=ASFLAGS,
         )
 

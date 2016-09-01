@@ -11,11 +11,29 @@ add_include_path(imager_env, '#include')
 # TODO: Make a cleaner way of exporting CROSS_LD through scons ENV
 boot_imager = Tool('boot-imager', 'boot-imager.c', usage='CROSS_LD='+CROSS_LD+' $TOOLPATH $SOURCES -o $TARGET', env=imager_env)
 
-cdisk_usage = '$TOOLPATH --part1={kconfig.FS_START},{kconfig.FS_DD_COUNT},{kconfig.FS_TYPE},EXT2 -s {kconfig.DISK_SZ}, '
-'-l 512 -b {BOOT_STAGE1_IMG} --stage-2={BOOT_STAGE2_IMG},1,{kconfig.BOOT_STAGE2_SECTORS}, $TARGET'.format(
-kconfig=kconfig, BOOT_STAGE1_IMG='${SOURCES[0]}', BOOT_STAGE2_IMG='${SOURCES[1]}')
+cdisk_usage  = '$TOOLPATH'
+cdisk_usage += ' '
+cdisk_usage += (','.join(('--part1=' + kconfig.FS_START, kconfig.FS_DD_COUNT, '${SOURCES[0]}', 'EXT2')))
+cdisk_usage += ' '
+cdisk_usage += (' '.join(('-s', kconfig.DISK_SZ, '-l', '512', '-b', '${SOURCES[1]}')))
+cdisk_usage += ' '
+cdisk_usage += (','.join(('--stage-2=' + '${SOURCES[2]}', '1', kconfig.BOOT_STAGE2_SECTORS)))
+cdisk_usage += ' '
+cdisk_usage += '$TARGET'
 
+# Sources: 2 = Stage2.img
+# Sources: 1 = Stage1.img
+# Sources: 0 = ext\d.img
 Tool('cdisk', 'cdisk.c', usage=cdisk_usage, env=imager_env)
 
+my_mkext2_usage =  ' FS_DD_BS='+kconfig.FS_DD_BS
+my_mkext2_usage += ' FS_DD_COUNT='+kconfig.FS_DD_COUNT
+my_mkext2_usage += ' SOURCE_SYSROOT='+Dir('#sysroot').path
+my_mkext2_usage += ' SOURCE_SYSSKEL='+Dir('#sysskel').path
+my_mkext2_usage += ' CHRONOS_OBJ=$SOURCE'
+my_mkext2_usage += ' USER_BIN='+Dir('#user').abspath
+my_mkext2_usage += ' TARGET=$TARGET'
+my_mkext2_usage += ' USER='+USER
+my_mkext2_usage += ' $TOOLPATH'
 
-#./tools/bin/cdisk --part1=$(FS_START),$(FS_DD_COUNT),$(FS_TYPE),EXT2 -s $(DISK_SZ) -l 512 -b kernel/arch/$(BUILD_ARCH)/boot/boot-stage1.img --stage-2=kernel/arch/           $(BUILD_ARCH)/boot/boot-stage2.img,1,$(BOOT_STAGE2_SECTORS) ./chronos.img
+Tool('my_mkext2.sh', None, usage=my_mkext2_usage)

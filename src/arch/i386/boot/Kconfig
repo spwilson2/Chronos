@@ -2,6 +2,10 @@ config FS_START
     int
     default 2048
 
+config FS_DD_BS
+    int
+    default 512
+
 config FS_DD_COUNT
     int
     default 2097152
