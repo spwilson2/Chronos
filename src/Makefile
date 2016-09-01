@@ -144,13 +144,7 @@ run:
 run-x:
 	$(QEMU) $(QEMU_OPTIONS)
 
-run-gdb: user/bin $(USER_BUILD)
-	cd kernel ; \
-	make kernel-symbols ; \
-	mv *.sym ..
-	cd user ; \
-	make user-symbols ; \
-	mv bin/*.sym ..
+run-gdb:
 	$(QEMU) -nographic $(QEMU_OPTIONS) -s -S
 
 run-x-gdb: kernel-symbols user/bin $(USER_BUILD) user-symbols

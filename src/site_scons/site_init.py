@@ -16,6 +16,11 @@ def build_path():
     # Take a build directory
     return ARGUMENTS.get('O', '')
 
+def rm_ext(path):
+    return os.path.splitext(path)[0]
+
+basename = os.path.basename
+
 def include_path(path):
     return Dir(path)
 

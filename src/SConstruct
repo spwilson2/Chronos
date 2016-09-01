@@ -4,12 +4,13 @@ import os
 
 InitSbuild()
 
+USER = os.getenv('USER')
 Phony(  
         allyesconfig=allyesconfig,
         defconfig=defconfig,
         # Clean target needs to also set the environment variable O since it's
         # not exported..
-        clean=[' scons -c O='+build_path(), 'rm site_scons/*.pyc'],
+        clean=['USER='+USER+' scons -c O='+build_path(), 'rm site_scons/*.pyc'],
         auto=None,
         TEST=None
      )
@@ -37,12 +38,13 @@ CROSS_LD        = crosstool_path('ld')
 CROSS_AS        = crosstool_path('gcc')
 CROSS_OBJCOPY   = crosstool_path('objcopy')
 
+export(CROSS_CC=CROSS_CC)
+
 HOST_CC         = 'gcc'#'/home/s/swilson/Projects/chronos/test.sh'
 HOST_LD         = 'ld'
 HOST_AS         = 'gcc'
 HOST_OBJCOPY    = 'objcopy'
 
-USER = os.getenv('USER')
 export(USER=USER)
 
 # TODO: Debug mode, both by config or cli flag.
@@ -70,7 +72,10 @@ ASFLAGS = [
 QEMU = 'qemu-system-' + kconfig.ARCH
 
 export(CROSS_LD=CROSS_LD)
-generic_env = Environment()
+ENV=os.environ
+generic_env = Environment(
+        ENV=ENV
+        )
 #add_flags(generic_env, OBJPREFIX='.S')
 #add_flags(generic_env, ENV={'CROSS_LD':CROSS_LD})
 

@@ -6,6 +6,7 @@ ADIR = Dir(APATH)
 export(ADIR=ADIR)
 
 include('kernel')
+include('user')
 include(APATH)
 
 KLINKFLAGS = ['-nostdlib', '--entry=main', '--section-start=.text=0xFF000000']

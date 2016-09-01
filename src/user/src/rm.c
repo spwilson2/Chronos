@@ -7,7 +7,7 @@
 
 #define __LINUX__
 #define __FILE_NO_FUNC__
-#include "file.h"
+#include <chronos/file.h>
 #include <dirent.h>
 
 int file_path_dir(const char* src, char* dst, uint sz)

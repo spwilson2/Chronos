@@ -7,7 +7,7 @@
 #include <dirent.h>
 
 #define __LINUX__
-#include "file.h"
+#include <chronos/file.h>
 
 #define OP_PIPE 0x01 /* \ */
 #define OP_FILE 0x02 /* > */

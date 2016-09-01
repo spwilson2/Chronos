@@ -1,0 +1,14 @@
+Init()
+
+VariantDir('bin', 'src')
+user_env = kenv.Clone(LINK=CROSS_CC)
+add_include_path(user_env, 'include')
+add_include_path(user_env, joinpath('bin','include'))
+add_flags(user_env, LINKFLAGS='-lncurses')
+add_flags(user_env, CCFLAGS='-lncurses')
+
+sources = Glob(joinpath('src','*.c'))
+
+for source in sources:
+    target = joinpath('bin', basename(rm_ext(source.path)))
+    user_env.Program(target=target, source=source)
